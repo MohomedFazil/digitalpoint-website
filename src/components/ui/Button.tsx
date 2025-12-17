@@ -14,7 +14,7 @@ export function Button({
   const variants = {
     primary: 'bg-[#1a1a1a] text-white hover:bg-black focus:ring-gray-900',
     secondary: 'bg-[#E91E63] text-white hover:bg-[#D81B60] focus:ring-pink-500',
-    cyan: 'bg-[#0EA5E9] text-white hover:bg-[#0284C7] focus:ring-cyan-500',
+    cyan: 'bg-[#1b63bb] text-white hover:bg-[#013fb2] focus:ring-cyan-500',
     outline: 'border border-gray-300 bg-transparent hover:bg-gray-50 text-gray-700',
     ghost: 'bg-transparent hover:bg-gray-100 text-gray-700'
   };
@@ -24,6 +24,6 @@ export function Button({
     lg: 'h-12 px-8 text-base'
   };
   return <button className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`} {...props}>
-      {children}
-    </button>;
+    {children}
+  </button>;
 }

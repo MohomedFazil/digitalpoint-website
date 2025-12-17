@@ -4,28 +4,19 @@ import { Button } from './ui/Button';
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const navLinks = [{
+    name: 'Home',
+    href: '#'
+  }, {
     name: 'About Us',
     href: '#'
   }, {
     name: 'Services',
     href: '#'
   }, {
-    name: 'Our Work',
+    name: 'Projects',
     href: '#'
   }, {
-    name: 'Clientele',
-    href: '#'
-  }, {
-    name: 'Gallery',
-    href: '#'
-  }, {
-    name: 'Testimonials',
-    href: '#'
-  }, {
-    name: 'Blogs',
-    href: '#'
-  }, {
-    name: 'Contact Us',
+    name: 'Blog',
     href: '#'
   }];
   return <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur-sm">
@@ -33,11 +24,15 @@ export function Header() {
       <div className="flex items-center justify-between h-20">
         {/* Logo */}
         <div className="flex items-center flex-shrink-0">
-          <img src='/logo.jpeg' className='w-20' />
+          <img src='logo.png' alt='Digital Point' className='w-20' />
+          {/* <div className="ml-2 text-xl font-bold flex flex-col">
+            <span className="uppercase text-orange-500 my-[-4px]">Digital</span>
+            <span className="text-black my-[-4px]">Point</span>
+          </div> */}
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden space-x-6 lg:flex">
+        <nav className="hidden space-x-12 lg:flex">
           {navLinks.map(link => <a key={link.name} href={link.href} className="text-xs font-medium text-gray-600 hover:text-[#E91E63] transition-colors uppercase tracking-wide">
             {link.name}
           </a>)}
@@ -46,7 +41,7 @@ export function Header() {
         {/* CTA */}
         <div className="items-center hidden lg:flex">
           <Button variant="primary" size="sm" className="px-6 rounded-full">
-            Huescape Login
+            Contact Us
           </Button>
         </div>
 
@@ -67,7 +62,7 @@ export function Header() {
         </a>)}
         <div className="px-3 mt-4">
           <Button variant="primary" className="w-full">
-            Huescape Login
+            Contact Us
           </Button>
         </div>
       </div>
