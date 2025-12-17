@@ -1,28 +1,30 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/Button';
+import { useLocation } from 'react-router-dom'; // Assuming react-router-dom is used for navigation
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation(); // Get the current location object
   const navLinks = [{
     name: 'Home',
-    href: '#'
+    href: '/'
   }, {
     name: 'About Us',
-    href: '#'
+    href: '/aboutus'
   }, {
     name: 'Services',
-    href: '#'
+    href: '/services'
   }, {
     name: 'Projects',
-    href: '#'
+    href: '/projects'
   }, {
     name: 'Blog',
-    href: '#'
+    href: '/blog'
   }];
   const contactUsLink = {
     name: 'Contact Us',
-    href: '#',
+    href: '/contactus',
     isButton: true
   };
 
@@ -39,7 +41,11 @@ export function Header() {
           <div className="flex-1 flex justify-center">
             <nav className="hidden space-x-12 lg:flex items-center">
               {navLinks.map(link => (
-                <a key={link.name} href={link.href} className="text-xs font-medium text-gray-600 hover:text-[#E91E63] transition-colors uppercase tracking-wide">
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className={`text-xs font-medium transition-colors uppercase tracking-wide ${location.pathname === link.href ? 'text-[#E91E63]' : 'text-gray-600 hover:text-[#E91E63]'}`}
+                >
                   {link.name}
                 </a>
               ))}
@@ -85,7 +91,7 @@ export function Header() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#E91E63] hover:bg-gray-50"
+                  className={`block px-3 py-2 rounded-md text-base font-medium ${location.pathname === link.href ? 'text-[#E91E63]' : 'text-gray-700 hover:text-[#E91E63] hover:bg-gray-50'}`}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}

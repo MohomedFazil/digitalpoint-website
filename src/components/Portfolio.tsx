@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 const portfolioItems = [{
   id: 1,
   color: 'bg-[#003366]',
@@ -37,37 +37,38 @@ const portfolioItems = [{
 }];
 export function Portfolio() {
   return <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Work</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Hue has made education marketing an absolute breeze for universities
-            and colleges around the world. Here's some of the work we have done
-            over the years.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
-          {portfolioItems.map((item, idx) => <div key={item.id} className={`relative group overflow-hidden rounded-xl cursor-pointer ${idx === 2 ? 'row-span-2' : ''} ${idx === 4 ? 'col-span-2' : ''}`}>
-              <div className={`absolute inset-0 ${item.color} opacity-20 group-hover:opacity-0 transition-opacity z-10`}></div>
-              <img src={item.image} alt={`Portfolio item ${item.id}`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
-                <span className="text-white font-medium border border-white/30 px-4 py-2 rounded-full backdrop-blur-sm">
-                  View Project
-                </span>
-              </div>
-            </div>)}
-
-          {/* Placeholder for the last item to fill grid nicely if needed */}
-          <div className="relative group overflow-hidden rounded-xl cursor-pointer bg-gray-100 flex items-center justify-center">
-            <div className="text-center p-6">
-              <span className="block text-3xl font-bold text-gray-300 mb-2">
-                +200
-              </span>
-              <span className="text-sm text-gray-500">More Projects</span>
-            </div>
-          </div>
-        </div>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Work</h2>
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          Hue has made education marketing an absolute breeze for universities
+          and colleges around the world. Here's some of the work we have done
+          over the years.
+        </p>
       </div>
-    </section>;
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+        {portfolioItems.map((item, idx) => <div key={item.id} className={`relative group overflow-hidden rounded-xl cursor-pointer ${idx === 2 ? 'row-span-2' : ''} ${idx === 4 ? 'col-span-2' : ''}`}>
+          <div className={`absolute inset-0 ${item.color} opacity-20 group-hover:opacity-0 transition-opacity z-10`}></div>
+          <img src={item.image} alt={`Portfolio item ${item.id}`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
+            <span className="text-white font-medium border border-white/30 px-4 py-2 rounded-full backdrop-blur-sm">
+              View Project
+            </span>
+          </div>
+        </div>)}
+
+        {/* Placeholder for the last item to fill grid nicely if needed */}
+        {/* Placeholder for the last item to fill grid nicely if needed */}
+        <Link to="/projects" className="relative group overflow-hidden rounded-xl cursor-pointer bg-gray-100 flex items-center justify-center">
+          <div className="text-center p-6">
+            <span className="block text-3xl font-bold text-gray-300 mb-2">
+              +200
+            </span>
+            <span className="text-sm text-gray-500">More Projects</span>
+          </div>
+        </Link>
+      </div>
+    </div>
+  </section>;
 }

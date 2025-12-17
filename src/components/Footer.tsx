@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook, Instagram, Linkedin, Twitter, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 export function Footer() {
   return <footer className="bg-gray-50 pt-20 pb-10 border-t border-gray-200">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,9 +26,9 @@ export function Footer() {
           <h3 className="font-bold text-gray-900 mb-6">Quick Links</h3>
           <ul className="space-y-3 text-sm text-gray-600">
             {['Home', 'About Us', 'Services', 'Projects', 'Blog'].map(item => <li key={item}>
-              <a href="#" className="hover:text-[#E91E63] transition-colors">
+              <Link to={`/${item.toLowerCase().replace(/\s+/g, '') === 'home' ? '' : item.toLowerCase().replace(/\s+/g, '')}`} className="hover:text-[#E91E63] transition-colors">
                 {item}
-              </a>
+              </Link>
             </li>)}
           </ul>
         </div>
@@ -37,9 +38,9 @@ export function Footer() {
           <h3 className="font-bold text-gray-900 mb-6">Our Services</h3>
           <ul className="space-y-3 text-sm text-gray-600">
             {['Banner Printing', 'Roll-up Banner Printing', 'X-Banner & L-Banner Printing', 'Backdrop Printing', 'Window Graphics Printing', 'Wall Sticker Printing'].map(item => <li key={item}>
-              <a href="#" className="hover:text-[#E91E63] transition-colors">
+              <Link to="/services" className="hover:text-[#E91E63] transition-colors">
                 {item}
-              </a>
+              </Link>
             </li>)}
           </ul>
         </div>

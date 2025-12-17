@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 const blogs = [{
   date: '5 Jun | Video Design',
   title: 'Welcoming Freshman Kit: Helps Students Connect With University',
@@ -22,9 +23,9 @@ export function BlogSection() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex justify-between items-end mb-12">
         <h2 className="text-4xl font-bold text-gray-900">Blogs</h2>
-        <a href="#" className="text-[#1b63bb] font-medium flex items-center hover:underline">
+        <Link to="/blog" className="text-[#1b63bb] font-medium flex items-center hover:underline">
           View All <ArrowRight className="ml-1 h-4 w-4" />
-        </a>
+        </Link>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -66,21 +67,6 @@ export function BlogSection() {
               </h3>
             </div>
           </div>)}
-
-          {/* Featured secondary item */}
-          <div className="bg-[#1b63bb]/10 p-6 rounded-xl mt-4 flex items-center justify-between">
-            <div>
-              <span className="text-xs font-bold text-[#1b63bb] uppercase tracking-wider mb-1 block">
-                New Guide
-              </span>
-              <h4 className="font-bold text-gray-900">
-                Customized Graduation Kits: Bring Graduation to Your Doorstep
-              </h4>
-            </div>
-            <div className="w-10 h-10 bg-[#1b63bb] rounded-full flex items-center justify-center text-white flex-shrink-0">
-              <ArrowRight className="h-5 w-5" />
-            </div>
-          </div>
         </div>
       </div>
     </div>
