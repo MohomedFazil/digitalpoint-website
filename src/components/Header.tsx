@@ -11,7 +11,7 @@ export function Header() {
     href: '/'
   }, {
     name: 'About Us',
-    href: '/aboutus'
+    href: '/about-us'
   }, {
     name: 'Services',
     href: '/services'
@@ -24,7 +24,7 @@ export function Header() {
   }];
   const contactUsLink = {
     name: 'Contact Us',
-    href: '/contactus',
+    href: '/contact-us',
     isButton: true
   };
 
