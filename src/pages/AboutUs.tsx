@@ -115,8 +115,12 @@ export function AboutUs() {
                         <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
                             Whether you need 50,000 prints or a complete brand overhaul, we are here to make it happen efficiently and beautifully.
                         </p>
-                        <Button variant="cyan" size="lg" className="rounded-full px-10">
+                        <Button
+                            onClick={() => window.location.href = '/contactus'}
+                            className="bg-[#E91E63] hover:bg-[#D81155] text-white px-8 py-4 rounded-full font-bold transition-all group flex items-center gap-2 mx-auto"
+                        >
                             Get in Touch
+                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </Button>
                     </div>
                 </section>

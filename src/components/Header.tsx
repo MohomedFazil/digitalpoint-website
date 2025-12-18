@@ -99,7 +99,7 @@ export function Header() {
               ))}
               <a
                 href={contactUsLink.href}
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#E91E63] hover:bg-gray-50 mt-1"
+                className={`block px-3 py-2 rounded-md text-base font-medium mt-1 ${location.pathname === contactUsLink.href ? 'text-[#E91E63]' : 'text-gray-700 hover:text-[#E91E63] hover:bg-gray-50'}`}
                 onClick={() => setIsOpen(false)}
               >
                 {contactUsLink.name}
