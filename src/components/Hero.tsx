@@ -9,7 +9,7 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="z-10">
-            <p className="text-[#1b63bb] font-medium mb-4 tracking-wide text-sm">
+            <p className="text-[#0640a3] font-medium mb-4 tracking-wide text-sm">
               What you want us to be!
             </p>
             <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6">
@@ -31,8 +31,9 @@ export function Hero() {
             <Button
               variant="primary"
               size="lg"
-              className="group bg-[#1b63bb] hover:bg-[#144f8f] text-white transition-colors duration-300
-                         focus:ring-2 focus:ring-[#1b63bb] focus:ring-offset-2 focus:outline-none"
+              className="group bg-[#0640a3] hover:bg-[#0640a3] text-white transition-colors duration-300
+                         focus:ring-2 focus:ring-[#0640a3] focus:ring-offset-2 focus:outline-none"
+              onClick={() => window.location.href = '/aboutus'}
             >
               Learn More
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
