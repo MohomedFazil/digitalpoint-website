@@ -1,23 +1,34 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-const blogs = [{
-  date: '5 Jun | Video Design',
-  title: 'Welcoming Freshman Kit: Helps Students Connect With University',
-  image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=200&auto=format&fit=crop'
-}, {
-  date: '29 Aug | Trends',
-  title: 'The Importance of Physical Outreach for Universities',
-  image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=200&auto=format&fit=crop'
-}, {
-  date: '23 Apr | Video Design',
-  title: '5 Universities With Unique Graduation Traditions',
-  image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=200&auto=format&fit=crop'
-}, {
-  date: '17 Feb | Printing',
-  title: 'Top 5 Social Media Marketing Trends of 2024 that are Here to Stay',
-  image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=200&auto=format&fit=crop'
-}];
+const blogs = [
+  {
+    date: '10 Dec | Printing Trends',
+    title: 'Top Trends in Banner and Flex Printing for 2025',
+    image: 'https://images.unsplash.com/photo-1581090700227-12c3f61a354d?q=80&w=200&auto=format&fit=crop'
+  },
+  {
+    date: '5 Dec | Branding',
+    title: 'How High-Quality Flag Printing Boosts Brand Visibility',
+    image: 'https://images.unsplash.com/photo-1581091870629-12dcd3b6a019?q=80&w=200&auto=format&fit=crop'
+  },
+  {
+    date: '2 Dec | Stickers',
+    title: 'Sticker and Transparent Sticker Printing: Elevate Your Products',
+    image: 'https://images.unsplash.com/photo-1598300050095-c6c7f983d2b1?q=80&w=200&auto=format&fit=crop'
+  },
+  {
+    date: '28 Nov | Event Printing',
+    title: 'Creating Impactful Funeral and Event Banners',
+    image: 'https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=200&auto=format&fit=crop'
+  },
+  {
+    date: '20 Nov | Signage',
+    title: 'Light and Name Board Printing: Stand Out in Style',
+    image: 'https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=200&auto=format&fit=crop'
+  }
+];
+
 export function BlogSection() {
   return <section className="py-20 bg-white">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,7 +58,7 @@ export function BlogSection() {
               17 Feb | Printing
             </span>
             <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#E91E63] transition-colors">
-              Marketing Is Made Simple With Hue
+              Marketing Is Made Simple With Digital Point
             </h3>
           </div>
         </div>

@@ -6,21 +6,15 @@ export function MarcomSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
-            Your Ideal Marcom Partner, Delivering Brilliance Globally.
+            Your Trusted Printing Partner, Bringing Designs to Life.
           </h2>
         </div>
         <div className="text-gray-400 text-lg leading-relaxed space-y-6">
           <p>
-            Imagine a world where attracting students is effortless. A world
-            where your brand voice resonates across all platforms, from
-            vibrant brochures to engaging social media campaigns. At Hue, we
-            turn that vision into reality.
+            Imagine a place where every print reflects clarity, precision, and professional design. Where your message stands out whether it's displayed on a flag, banner, board, or sticker. At Digital Point, we transform ideas into high quality printed visuals that make a lasting impression.
           </p>
           <p>
-            Over more than a decade, Hue Marcom has gradually evolved into a
-            space that offers a comprehensive suite of marketing and
-            communication (marcom) solutions designed to supercharge your
-            student recruitment.
+            From vibrant flag and X-banner printing to durable flex banners, light boards, name boards, funeral banners, and premium stickers, we deliver designs crafted with care and printed to perfection. With a focus on quality materials, accurate colors, and clean finishes, Digital Point provides reliable printing solutions that elevate your brand presence every time.
           </p>
         </div>
       </div>
@@ -41,7 +35,7 @@ export function MarcomSection() {
           </svg>
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <MoveRight className="text-white w-8 h-8" />
+          <MoveRight className="text-gray-400/20 w-8 h-8" />
         </div>
       </div>
     </div>

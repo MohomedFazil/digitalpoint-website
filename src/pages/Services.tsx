@@ -19,7 +19,6 @@ import { Button } from '../components/ui/Button';
 export function Services() {
     return (
         <div className="min-h-screen bg-white font-sans selection:bg-[#E91E63] selection:text-white">
-            <Header />
             <main>
                 {/* Hero Section */}
                 <section className="relative h-[60vh] min-h-[500px] flex items-center overflow-hidden">
@@ -264,11 +263,11 @@ export function Services() {
                             Get the best prices for your bulk printing needs. Our team is ready to assist you.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <Button variant="cyan" size="lg" className="rounded-full px-8 w-full sm:w-auto">
-                                Request Quote
-                            </Button>
-                            <Button variant="outline" size="lg" className="rounded-full px-8 w-full sm:w-auto text-white border-white hover:bg-white hover:text-black">
-                                Contact Sales
+                            <Button
+                                onClick={() => window.location.href = '/contactus'}
+                                className="bg-[#1b63bb] hover:bg-[#0045b4] text-white px-8 py-6 rounded-full font-bold text-lg transition-all group flex items-center gap-2 mx-auto"
+                            >
+                                Contact Us
                             </Button>
                         </div>
                     </div>

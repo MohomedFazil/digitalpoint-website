@@ -7,7 +7,6 @@ import { Button } from '../components/ui/Button';
 export function AboutUs() {
     return (
         <div className="min-h-screen bg-white font-sans selection:bg-[#E91E63] selection:text-white">
-            <Header />
             <main>
                 {/* Hero Section */}
                 <section className="relative h-[60vh] min-h-[500px] flex items-center overflow-hidden">
@@ -107,17 +106,76 @@ export function AboutUs() {
                     </div>
                 </section>
 
+                {/* Strategic Business Units / Our Subsidiaries */}
+                <section className="py-24 bg-white">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center mb-16">
+                            <span className="text-[#1b63bb] font-bold uppercase tracking-wider text-sm mb-2 block">Strategic Business Units</span>
+                            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Subsidiaries</h2>
+                            <p className="text-gray-600 max-w-3xl mx-auto">
+                                Our subsidiaries represent the expanding footprint of our organization, each established to address specific market needs and deliver specialized solutions.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {/* Digital Point */}
+                            <div className="group bg-gradient-to-br from-gray-50 to-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-[#E91E63]/20 transition-all duration-300">
+                                <div className="w-16 h-16 bg-gradient-to-br from-[#E91E63] to-[#C2185B] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                    <Printer className="w-8 h-8 text-white" />
+                                </div>
+                                <h3 className="text-2xl font-bold text-gray-900 mb-3">Digital Point</h3>
+                                <p className="text-gray-600 leading-relaxed mb-4">
+                                    Our flagship printing and marketing communications division, delivering premium quality prints and integrated marcom solutions to businesses worldwide.
+                                </p>
+                                <div className="flex items-center text-[#E91E63] font-medium text-sm group-hover:gap-2 transition-all">
+                                    <span>Core Business</span>
+                                </div>
+                            </div>
+
+                            {/* Subsidiary 2 */}
+                            <div className="group bg-gradient-to-br from-gray-50 to-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-[#1b63bb]/20 transition-all duration-300">
+                                <div className="w-16 h-16 bg-gradient-to-br from-[#1b63bb] to-[#0851b3] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                    <ShieldCheck className="w-8 h-8 text-white" />
+                                </div>
+                                <h3 className="text-2xl font-bold text-gray-900 mb-3">Digital Solutions</h3>
+                                <p className="text-gray-600 leading-relaxed mb-4">
+                                    Specialized in digital transformation services, providing cutting-edge technology solutions and digital infrastructure for modern businesses.
+                                </p>
+                                <div className="flex items-center text-[#1b63bb] font-medium text-sm group-hover:gap-2 transition-all">
+                                    <span>Technology Division</span>
+                                </div>
+                            </div>
+
+                            {/* Subsidiary 3 */}
+                            <div className="group bg-gradient-to-br from-gray-50 to-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-[#00897B]/20 transition-all duration-300">
+                                <div className="w-16 h-16 bg-gradient-to-br from-[#00897B] to-[#00695C] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                    <Award className="w-8 h-8 text-white" />
+                                </div>
+                                <h3 className="text-2xl font-bold text-gray-900 mb-3">Creative Studio</h3>
+                                <p className="text-gray-600 leading-relaxed mb-4">
+                                    A dedicated creative agency focused on brand strategy, design excellence, and innovative marketing campaigns that captivate audiences.
+                                </p>
+                                <div className="flex items-center text-[#00897B] font-medium text-sm group-hover:gap-2 transition-all">
+                                    <span>Creative Division</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* CTA */}
+
                 <section className="py-24 bg-[#1a1a1a] relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-1/3 h-full bg-[#E91E63]/10 transform skew-x-12"></div>
+                    <div className="absolute top-0 right-0 w-1/3 h-full bg-[#0851b3]/10 transform skew-x-12"></div>
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Start Your Project?</h2>
                         <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
                             Whether you need 50,000 prints or a complete brand overhaul, we are here to make it happen efficiently and beautifully.
                         </p>
+
                         <Button
                             onClick={() => window.location.href = '/contactus'}
-                            className="bg-[#E91E63] hover:bg-[#D81155] text-white px-8 py-4 rounded-full font-bold transition-all group flex items-center gap-2 mx-auto"
+                            className="bg-[#1b63bb] hover:bg-[#0045b4] text-white px-8 py-6 rounded-full font-bold text-lg transition-all group flex items-center gap-2 mx-auto"
                         >
                             Get in Touch
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

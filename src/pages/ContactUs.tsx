@@ -6,7 +6,6 @@ import { Mail, MapPin, Phone, Send } from 'lucide-react';
 export function ContactUs() {
     return (
         <div className="min-h-screen bg-white font-sans selection:bg-[#E91E63] selection:text-white">
-            <Header />
 
             <main className="pt-20 pb-20">
                 {/* Hero Section */}

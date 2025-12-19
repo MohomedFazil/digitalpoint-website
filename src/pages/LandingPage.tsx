@@ -11,7 +11,6 @@ import { BlogSection } from '../components/BlogSection';
 import { Footer } from '../components/Footer';
 export function LandingPage() {
   return <div className="min-h-screen bg-white font-sans selection:bg-[#E91E63] selection:text-white">
-    <Header />
     <main>
       <Hero />
       <Services />

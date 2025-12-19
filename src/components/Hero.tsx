@@ -23,20 +23,15 @@ export function Hero() {
               Partner
             </h1>
             <p className="text-gray-600 text-lg mb-8 max-w-lg leading-relaxed">
-              We cater to all your printing needs, from posters to orientation
-              kits, offering flexibility from 5 to 50,000 copies. Benefit from
-              our cost advantages with high-quality printing at 50% lower costs
-              due to our geographical location.
+              Digital Point delivers premium printing solutions for every need, from small batches to large scale orders. With a focus on quality, precision, and affordability, we bring your ideas to life beautifully and efficiently.
             </p>
             <Button
-              variant="primary"
               size="lg"
-              className="group bg-[#0640a3] hover:bg-[#0640a3] text-white transition-colors duration-300
-                         focus:ring-2 focus:ring-[#0640a3] focus:ring-offset-2 focus:outline-none"
+              className="group bg-[#0851b3] hover:bg-[#05358a] text-white transition-colors duration-300 disabled:bg-gray-100 disabled:text-gray-400 focus:outline-none focus:ring-5 focus:ring-[#0851b3]"
               onClick={() => window.location.href = '/aboutus'}
             >
               Learn More
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
 

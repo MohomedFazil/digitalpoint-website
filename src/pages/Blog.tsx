@@ -61,7 +61,7 @@ const BLOG_DATA: BlogPost[] = [
         title: 'The Importance of Physical Outreach for Universities',
         category: 'Trends',
         date: '29 Aug 2024',
-        image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop',
+        image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop',
         author: 'Dr. James Wilson',
         excerpt: 'In a digital-first world, physical outreach remains a powerful tool for universities to build lasting relationships.',
         content: (
@@ -81,7 +81,7 @@ const BLOG_DATA: BlogPost[] = [
         title: '5 Universities With Unique Graduation Traditions',
         category: 'Video Design',
         date: '23 Apr 2024',
-        image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop',
+        image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop',
         author: 'Emily Chen',
         excerpt: 'From throwing hats to jumping in fountains, explore the most unique ways students celebrate their graduation.',
         content: (
@@ -139,7 +139,6 @@ export function Blog() {
 
     return (
         <div className="min-h-screen bg-gray-50 flex flex-col font-sans selection:bg-[#E91E63] selection:text-white">
-            <Header />
 
             {/* Removed pt-20 to fix the gap issue */}
             <main className="flex-grow">
@@ -292,62 +291,7 @@ export function Blog() {
                                                 <span key={tag} className="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full font-medium">#{tag}</span>
                                             ))}
                                         </div>
-                                        <div className="flex items-center gap-4">
-                                            <button className="flex items-center text-gray-500 hover:text-[#E91E63] transition-colors">
-                                                <Heart className="w-5 h-5 mr-2" /> {selectedPost.likes} Likes
-                                            </button>
-                                            <button className="flex items-center text-gray-500 hover:text-[#1b63bb] transition-colors">
-                                                <Share2 className="w-5 h-5 mr-2" /> Share
-                                            </button>
-                                        </div>
                                     </div>
-
-                                    {/* Comments Section */}
-                                    <div className="mt-16 bg-gray-50 rounded-2xl p-8">
-                                        <h3 className="text-2xl font-bold text-gray-900 mb-8 flex items-center">
-                                            <MessageCircle className="w-6 h-6 mr-3 text-[#1b63bb]" />
-                                            Comments ({selectedPost.comments.length})
-                                        </h3>
-
-                                        {/* Comment List */}
-                                        <div className="space-y-8 mb-10">
-                                            {selectedPost.comments.length > 0 ? (
-                                                selectedPost.comments.map(comment => (
-                                                    <div key={comment.id} className="flex gap-4">
-                                                        <img src={comment.avatar} alt={comment.user} className="w-10 h-10 rounded-full object-cover" />
-                                                        <div>
-                                                            <div className="flex items-center gap-2 mb-1">
-                                                                <span className="font-bold text-gray-900">{comment.user}</span>
-                                                                <span className="text-xs text-gray-500">• {comment.date}</span>
-                                                            </div>
-                                                            <p className="text-gray-700 text-sm">{comment.content}</p>
-                                                        </div>
-                                                    </div>
-                                                ))
-                                            ) : (
-                                                <p className="text-gray-500 italic text-center py-4">No comments yet. Be the first to share your thoughts!</p>
-                                            )}
-                                        </div>
-
-                                        {/* Add Comment Form */}
-                                        <form onSubmit={handlePostComment} className="relative">
-                                            <textarea
-                                                value={commentText}
-                                                onChange={(e) => setCommentText(e.target.value)}
-                                                placeholder="Write a comment..."
-                                                className="w-full bg-white border border-gray-200 rounded-xl p-4 pr-12 focus:ring-2 focus:ring-[#1b63bb] focus:border-transparent outline-none resize-none transition-all"
-                                                rows={3}
-                                            />
-                                            <button
-                                                type="submit"
-                                                disabled={!commentText.trim()}
-                                                className="absolute bottom-4 right-4 p-2 bg-[#1b63bb] text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                                            >
-                                                <Send className="w-4 h-4" />
-                                            </button>
-                                        </form>
-                                    </div>
-
                                 </div>
 
                                 {/* Sidebar (Recommended) */}
