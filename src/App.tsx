@@ -1,6 +1,4 @@
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { LandingPage } from './pages/LandingPage';
 import { AboutUs } from './pages/AboutUs';
 import { Services } from './pages/Services';
 import { Projects } from './pages/Projects';
@@ -28,5 +26,5 @@ export function App() {
         </Routes>
       </div>
     </BrowserRouter>
-  );
+    )
 }
