@@ -1,5 +1,5 @@
 import React from 'react';
-const logos = ['Purdue University', 'Cornell Education', 'IN-COUNTRY', 'Sault College', 'Montpellier Business School', 'Austin Peay', 'Woodbury University'];
+const logos = ['A9 Salon', 'Prime College', 'Empire Trading Agency', 'Amrajh Enterprises', 'Sampath Lanka Oil Mart', 'Simarol car care', 'Mobile Planet(PVT)LTD'];
 export function Collaborators() {
   return <section className="py-16 bg-white relative z-20">
     <div className="text-center mb-16 md:mb-32">

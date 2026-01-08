@@ -1,24 +1,20 @@
 import React from 'react';
 const testimonials = [{
-  name: 'Susan Carvalho',
-  role: 'Associate Provost, University of Alabama',
-  image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop',
-  quote: 'Hue Marcom has been a great catalyst both for the events to which we travel and for our correspondence with global partners.'
+  name: 'Chandana Lakmal Rubasinghe',
+  image: '/testimonials/test01.jpeg',
+  quote: 'Highly recommended. Excellent service with outstanding quality finished products. Thank you to the entire team.'
 }, {
-  name: 'Zach Wittmann',
-  role: 'Associate Director, Recruitment College',
-  image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop',
-  quote: 'I have found that Hue Marcom is an extremely professional company with employees that genuinely care about delivering the highest quality.'
-}, {
-  name: 'Ragh Singh',
-  role: 'Program Manager, Strategic Global',
-  image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop',
-  quote: 'At Northern Arizona University we have had a fantastic experience working with the Hue Marcom team on a number of projects.'
-}, {
-  name: 'Claudia Espinoza',
-  role: 'Director, International Student Recruitment',
-  image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop',
-  quote: 'As director of international student recruitment and strategic initiatives at Wright State University I have been very satisfied.'
+  name: 'Subhash Gunawardhane',
+  image: '/testimonials/test02.jpeg',
+  quote: 'Excellent service with prompt responses. DIGITAL Point delivers high-quality printing and advertising products at affordable prices. Friendly staff, flexible pricing, on-time delivery. Highly recommended.'
+},  {
+  name: 'Sampath Lanka Oil Mart',
+  image: '/testimonials/test03.jpeg',
+  quote: 'Highly professional service with excellent quality finished products. Very satisfied with the overall experience. Strongly recommended.'
+},  {
+  name: 'Simarol Car Care',
+  image: '/testimonials/test04.jpeg',
+  quote: 'Great service, timely delivery, and top-quality results. The team was supportive and professional throughout. Highly recommended.'
 }];
 export function Testimonials() {
   return <section className="bg-[#1a1a1a] pt-48 pb-24 text-white relative z-10">
@@ -46,9 +42,6 @@ export function Testimonials() {
             <h3 className="text-lg font-bold text-white mb-1">
               {testimonial.name}
             </h3>
-            <p className="text-xs text-gray-500 mb-4 h-8 overflow-hidden">
-              {testimonial.role}
-            </p>
             <p className="text-sm text-gray-400 italic leading-relaxed flex-grow">
               "{testimonial.quote}"
             </p>

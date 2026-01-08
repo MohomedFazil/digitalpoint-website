@@ -91,8 +91,8 @@ export function ContactUs() {
                                         <div className="ml-6">
                                             <h3 className="text-lg font-semibold text-gray-900 mb-1">Our Location</h3>
                                             <p className="text-gray-600 leading-relaxed">
-                                                123 Digital Avenue, Tech District<br />
-                                                Colombo 03, Sri Lanka
+                                                11640, Makola, Mawaramandiya<br />
+                                                Kiribathgoda, Sri Lanka
                                             </p>
                                         </div>
                                     </div>
@@ -103,7 +103,8 @@ export function ContactUs() {
                                         </div>
                                         <div className="ml-6">
                                             <h3 className="text-lg font-semibold text-gray-900 mb-1">Phone Number</h3>
-                                            <p className="text-gray-600">+94 11 234 5678</p>
+                                            <p className="text-gray-600">+94 71 626 8239</p>
+                                            <p className="text-gray-600">+94 74 065 5900</p>
                                             <p className="text-gray-500 text-sm mt-1">Mon-Fri 9am-6pm</p>
                                         </div>
                                     </div>
@@ -114,8 +115,8 @@ export function ContactUs() {
                                         </div>
                                         <div className="ml-6">
                                             <h3 className="text-lg font-semibold text-gray-900 mb-1">Email Address</h3>
-                                            <p className="text-gray-600">hello@digitalpoint.com</p>
-                                            <p className="text-gray-600">support@digitalpoint.com</p>
+                                            <p className="text-gray-600">info@digitalpoint.lk</p>
+
                                         </div>
                                     </div>
                                 </div>
@@ -124,7 +125,7 @@ export function ContactUs() {
                             {/* Map Placeholder */}
                             <div className="h-64 md:h-80 w-full bg-gray-100 rounded-3xl overflow-hidden relative group">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126743.58585979669!2d79.78616443422238!3d6.921922576115978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae253d10f7a7003%3A0x320b2e4d32d3838d!2sColombo!5e0!3m2!1sen!2slk!4v1710321456789!5m2!1sen!2slk"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.273122500792!2d79.94934148469268!3d6.977066899755525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2577743aad37b%3A0x233bfca55ff118c0!2sDigital%20point%20(%20Pvt%20)%20Ltd!5e0!3m2!1sen!2slk!4v1767871180220!5m2!1sen!2slk"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0 }}
@@ -150,7 +151,7 @@ export function ContactUs() {
                                             onChange={handleChange}
                                             required
                                             className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#E91E63] focus:border-transparent outline-none transition-all bg-white"
-                                            placeholder="John"
+                                            placeholder="First Name"
                                         />
                                     </div>
                                     <div>
@@ -162,7 +163,7 @@ export function ContactUs() {
                                             onChange={handleChange}
                                             required
                                             className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#E91E63] focus:border-transparent outline-none transition-all bg-white"
-                                            placeholder="Doe"
+                                            placeholder="Last Name"
                                         />
                                     </div>
                                 </div>
@@ -176,7 +177,7 @@ export function ContactUs() {
                                         onChange={handleChange}
                                         required
                                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#E91E63] focus:border-transparent outline-none transition-all bg-white"
-                                        placeholder="john@example.com"
+                                        placeholder="name@example.com"
                                     />
                                 </div>
 
@@ -189,9 +190,10 @@ export function ContactUs() {
                                         className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#E91E63] focus:border-transparent outline-none transition-all bg-white text-gray-600"
                                     >
                                         <option>General Inquiry</option>
-                                        <option>Project Proposal</option>
-                                        <option>Technical Support</option>
-                                        <option>Careers</option>
+                                        <option>Request Project Proposal</option>
+                                        <option>Request Similar Projects</option>
+                                        <option>Request Custom Quote</option>
+                                        <option>Others</option>
                                     </select>
                                 </div>
 

@@ -76,7 +76,7 @@ export function Header() {
         <>
           {/* Mobile menu overlay */}
           <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+            className="fixed inset-0 bg-black/5 backdrop-blur-md z-40 lg:hidden"
             onClick={() => setIsOpen(false)}
           ></div>
 

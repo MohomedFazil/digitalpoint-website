@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Twitter, MapPin } from 'lucide-react';
+import { Facebook, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 export function Footer() {
   return (
@@ -89,15 +89,18 @@ export function Footer() {
               <span className="absolute -bottom-2.5 left-0 w-12 h-1 bg-[#E91E63] rounded-full shadow-[0_0_15px_rgba(233,30,99,0.3)]" />
             </h3>
             <div className="flex space-x-4">
-              {[Facebook, Instagram].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-12 h-12 rounded-2xl border border-gray-200 bg-white flex items-center justify-center text-gray-400 hover:bg-[#E91E63] hover:text-white hover:border-[#E91E63] hover:-translate-y-2 transition-all duration-300 shadow-md group"
-                >
-                  <Icon className="h-5 w-5" />
-                </a>
-              ))}
+              <a
+                href="https://www.facebook.com/share/14RCixPvVDR/"
+                className="w-12 h-12 rounded-2xl border border-gray-200 bg-white flex items-center justify-center text-gray-400 hover:bg-[#E91E63] hover:text-white hover:border-[#E91E63] hover:-translate-y-2 transition-all duration-300 shadow-md group"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a
+                href="tel:+94740655900"
+                className="w-12 h-12 rounded-2xl border border-gray-200 bg-white flex items-center justify-center text-gray-400 hover:bg-[#E91E63] hover:text-white hover:border-[#E91E63] hover:-translate-y-2 transition-all duration-300 shadow-md group"
+              >
+                <Phone className="h-5 w-5" />
+              </a>
             </div>
           </div>
         </div>

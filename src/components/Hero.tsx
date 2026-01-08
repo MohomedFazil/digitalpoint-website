@@ -53,7 +53,7 @@ export function Hero() {
             <div className="absolute -top-10 -right-4 lg:-right-16 bg-white px-6 py-10 rounded-xl shadow-xl border border-gray-100 w-80 z-20">
               <div className="flex items-start justify-between mb-2">
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900">490,000</h3>
+                  <h3 className="text-3xl font-bold text-gray-900">10,000+</h3>
                   <p className="text-xs text-gray-500 uppercase tracking-wider">
                     Units of Prints Produced in 2025
                   </p>

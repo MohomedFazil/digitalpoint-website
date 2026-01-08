@@ -2,51 +2,89 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Footer } from '../components/Footer';
 import { Testimonials } from '../components/Testimonials';
 import { Button } from '../components/ui/Button';
-import { ArrowRight, X } from 'lucide-react';
+import { ArrowRight, X, Clock, Layers, FileCheck, ChevronRight, ChevronLeft } from 'lucide-react';
 
 // Project Data
 const projects = [
     {
         id: 1,
-        title: "TechFlow Brand Identity",
-        category: "Branding",
-        image: "/projects/project01.jpeg",
-        description: "Complete corporate identity overhaul for a leading fintech startup, including logo design, stationery, and brand guidelines."
+        title: "Empire Sports Complex Branding",
+        category: "Event Branding",
+        image: "/projects/project22.jpeg",
+        description: "Complete event branding solution with flex banners, stage backdrops, and directional signboards. Enhances visibility and consistency throughout the sports complex for maximum audience engagement.",
+        duration: "7 Working Days",
+        material: "Heavy-duty Flex & Vinyl",
+        sample: "Site Mockup Available"
     },
     {
         id: 2,
-        title: "EcoScape Large Format",
-        category: "Printing",
+        title: "Retail Shop Front Branding",
+        category: "Shop Branding",
         image: "/projects/project02.jpeg",
-        description: "Massive outdoor advertising campaign featuring weather-resistant vinyl banners and building wraps for an environmental initiative."
+        description: "End-to-end shop branding with illuminated boards, vinyl stickers, and exterior signage. Focused on improving storefront appeal and strengthening brand recognition for retail businesses.",
+        duration: "5 Working Days",
+        material: "Acrylic, LED & Vinyl",
+        sample: "Digital Proofs"
     },
     {
         id: 3,
-        title: "Urban Coffee Packaging",
-        category: "Marketing",
+        title: "Large Format Flex & Banner Campaign",
+        category: "Printing",
         image: "/projects/project03.jpeg",
-        description: "Sustainable and eye-catching packaging design for a premium coffee chain, focusing on organic textures and vibrant colors."
+        description: "High-resolution flex banners and hoarding boards for outdoor advertising. Weather-resistant materials and vibrant color accuracy ensure long-lasting visibility in high-traffic urban locations.",
+        duration: "3 Working Days",
+        material: "UV Resistant Flex",
+        sample: "Material Swatch"
     },
     {
         id: 4,
-        title: "Neon Nights Signage",
-        category: "Printing",
-        image: "/projects/project10.jpeg",
-        description: "Custom fabrication of 3D acrylic LED signage for a downtown nightlife district, ensuring high visibility and durability."
+        title: "3D LED Signage & Lettering",
+        category: "Sign Boards",
+        image: "/projects/project20.jpeg",
+        description: "Custom-fabricated 3D plastic and stainless-steel letters with LED lighting. CNC and laser cutting techniques achieve precise detailing and premium finishes for a modern look.",
+        duration: "10 Working Days",
+        material: "Stainless Steel & Acrylic",
+        sample: "3D Render"
     },
     {
         id: 5,
-        title: "Global Summit Expo",
+        title: "Exhibition Stall Design & Fabrication",
         category: "Marketing",
-        image: "/projects/project11.jpeg",
-        description: "End-to-end event branding including booth design, roll-up banners, and promotional merchandise for an international conference."
+        image: "/projects/project24.jpeg",
+        description: "Creative stall design for trade fairs, including structural panels, branded graphics, and lighting. Designed to attract visitors and clearly communicate brand messaging effectively.",
+        duration: "12 Working Days",
+        material: "MDF, Aluminum & Fabrics",
+        sample: "3D Walkthrough"
     },
     {
         id: 6,
-        title: "Luxe Interiors Brochure",
+        title: "Vehicle Branding Project",
         category: "Branding",
+        image: "/projects/project18.jpeg",
+        description: "Professional vehicle branding using high-quality vinyl stickers and protective lamination. Ensures maximum brand exposure while maintaining durability against weather and daily wear and tear.",
+        duration: "4 Working Days",
+        material: "3M Cast Vinyl",
+        sample: "Layout Design"
+    },
+    {
+        id: 7,
+        title: "Light Boards & Name Boards Installation",
+        category: "Printing",
+        image: "/projects/project23.jpeg",
+        description: "Design, printing, and installation of LED light boards for commercial properties. Emphasizes clarity, nighttime visibility, and energy-efficient lighting solutions for any business storefront.",
+        duration: "6 Working Days",
+        material: "Polycarbonate & LED",
+        sample: "Prototype Video"
+    },
+    {
+        id: 8,
+        title: "Sticker, Sublimation & Promotional Prints",
+        category: "Marketing",
         image: "/projects/project06.jpeg",
-        description: "Premium offset printing for a luxury real estate brochure, utilizing spot UV coating and high-grade matte paper."
+        description: "High-quality sticker printing and sublimation prints for promotional merchandise. Delivered fast turnaround with sharp details and long-lasting print quality for all marketing needs.",
+        duration: "2 Working Days",
+        material: "Premium Glossy Paper",
+        sample: "Physical Sample"
     }
 ];
 
@@ -55,10 +93,30 @@ const categories = ["All", "Branding", "Printing", "Marketing"];
 export function Projects() {
     const [activeCategory, setActiveCategory] = useState("All");
     const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+    const [currentPage, setCurrentPage] = useState(1);
+    const ITEMS_PER_PAGE = 6;
 
     const filteredProjects = activeCategory === "All"
         ? projects
         : projects.filter(project => project.category === activeCategory);
+
+    const totalPages = Math.ceil(filteredProjects.length / ITEMS_PER_PAGE);
+    const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
+    const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
+    const currentProjects = filteredProjects.slice(indexOfFirstItem, indexOfLastItem);
+
+    const handlePageChange = (pageNumber: number) => {
+        setCurrentPage(pageNumber);
+        const section = document.getElementById('projects-grid');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    // Reset to page 1 when category changes
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [activeCategory]);
 
     const handleNextProject = useCallback((e?: React.MouseEvent) => {
         e?.stopPropagation();
@@ -133,7 +191,7 @@ export function Projects() {
                 </section>
 
                 {/* Filter & Grid Section */}
-                <section className="py-20 bg-gray-50">
+                <section id="projects-grid" className="py-20 bg-gray-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         {/* Filters */}
                         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
@@ -159,7 +217,7 @@ export function Projects() {
 
                         {/* Projects Grid */}
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {filteredProjects.map((project) => (
+                            {currentProjects.map((project) => (
                                 <div
                                     key={project.id}
                                     onClick={() => setSelectedProject(project)}
@@ -194,6 +252,46 @@ export function Projects() {
                                 </div>
                             ))}
                         </div>
+
+                        {/* Pagination Section */}
+                        {totalPages > 1 && (
+                            <div className="flex items-center justify-center space-x-2 mt-12">
+                                <button
+                                    onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+                                    disabled={currentPage === 1}
+                                    className={`p-2 rounded-full border transition-all ${currentPage === 1
+                                        ? 'text-gray-300 border-gray-100 cursor-not-allowed'
+                                        : 'text-gray-600 border-gray-200 hover:border-[#E91E63] hover:text-[#E91E63]'
+                                        }`}
+                                >
+                                    <ChevronLeft className="w-5 h-5" />
+                                </button>
+
+                                {[...Array(totalPages)].map((_, i) => (
+                                    <button
+                                        key={i}
+                                        onClick={() => handlePageChange(i + 1)}
+                                        className={`w-10 h-10 rounded-full font-bold transition-all ${currentPage === i + 1
+                                            ? 'bg-[#E91E63] text-white shadow-md'
+                                            : 'text-gray-600 hover:bg-gray-50 border border-gray-200'
+                                            }`}
+                                    >
+                                        {i + 1}
+                                    </button>
+                                ))}
+
+                                <button
+                                    onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
+                                    disabled={currentPage === totalPages}
+                                    className={`p-2 rounded-full border transition-all ${currentPage === totalPages
+                                        ? 'text-gray-300 border-gray-100 cursor-not-allowed'
+                                        : 'text-gray-600 border-gray-200 hover:border-[#E91E63] hover:text-[#E91E63]'
+                                        }`}
+                                >
+                                    <ChevronRight className="w-5 h-5" />
+                                </button>
+                            </div>
+                        )}
                     </div>
                 </section>
 
@@ -242,42 +340,93 @@ export function Projects() {
                     className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
                     onClick={() => setSelectedProject(null)}
                 >
-                    <div className="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-black/80 backdrop-blur-md transition-opacity duration-300" />
 
                     <div
-                        className="relative w-full max-w-5xl bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh]"
+                        className="relative w-full max-w-5xl bg-white rounded-[2rem] overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh] animate-in fade-in zoom-in duration-300"
                         onClick={e => e.stopPropagation()}
                     >
                         {/* Close Button */}
                         <button
                             onClick={() => setSelectedProject(null)}
-                            className="absolute top-4 right-4 z-20 p-2 bg-black/10 hover:bg-black/20 text-gray-800 rounded-full transition-colors backdrop-blur-md"
+                            className="absolute top-6 right-6 z-30 p-2 bg-white/20 hover:bg-white/40 text-white md:text-gray-800 md:bg-gray-100 md:hover:bg-gray-200 rounded-full transition-all backdrop-blur-md"
                         >
                             <X className="w-6 h-6" />
                         </button>
 
                         {/* Image Section */}
-                        <div className="w-full md:w-1/2 h-64 md:h-auto relative">
+                        <div className="w-full md:w-1/2 h-72 md:h-auto relative group">
                             <img
                                 src={selectedProject.image}
                                 alt={selectedProject.title}
                                 className="w-full h-full object-cover"
                             />
-                            <div className="absolute top-4 left-4">
-                                <span className="bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-bold text-[#E91E63] uppercase tracking-wide">
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:hidden" />
+                            <div className="absolute bottom-6 left-6 md:top-6 md:left-6 md:bottom-auto">
+                                <span className="bg-[#E91E63] text-white px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wide shadow-lg">
                                     {selectedProject.category}
                                 </span>
                             </div>
+
+
                         </div>
 
                         {/* Content Section */}
-                        <div className="w-full md:w-1/2 p-8 md:p-12 overflow-y-auto bg-white flex flex-col justify-center">
-                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                                {selectedProject.title}
-                            </h2>
-                            <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                                {selectedProject.description}
-                            </p>
+                        <div className="w-full md:w-1/2 p-8 md:p-12 overflow-y-auto bg-white flex flex-col">
+                            <div className="flex-1">
+                                <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 leading-tight">
+                                    {selectedProject.title}
+                                </h2>
+
+                                <div className="space-y-8 mb-10">
+                                    <div>
+                                        <h4 className="text-sm font-bold uppercase tracking-widest text-[#E91E63] mb-3">Project Overview</h4>
+                                        <p className="text-gray-600 text-lg leading-relaxed">
+                                            {selectedProject.description}
+                                        </p>
+                                    </div>
+
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                        <div className="flex items-start gap-4">
+                                            <div className="p-3 bg-pink-50 rounded-2xl text-[#E91E63]">
+                                                <Clock className="w-5 h-5" />
+                                            </div>
+                                            <div>
+                                                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider">Duration</p>
+                                                <p className="text-gray-900 font-semibold">{selectedProject.duration}</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-start gap-4">
+                                            <div className="p-3 bg-blue-50 rounded-2xl text-blue-600">
+                                                <Layers className="w-5 h-5" />
+                                            </div>
+                                            <div>
+                                                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider">Material</p>
+                                                <p className="text-gray-900 font-semibold">{selectedProject.material}</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-start gap-4">
+                                            <div className="p-3 bg-green-50 rounded-2xl text-green-600">
+                                                <FileCheck className="w-5 h-5" />
+                                            </div>
+                                            <div>
+                                                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider">Sample</p>
+                                                <p className="text-gray-900 font-semibold">{selectedProject.sample}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="pt-8 border-t border-gray-100">
+                                <button
+                                    onClick={() => window.location.href = '/contact-us'}
+                                    className="w-full bg-[#0A0A0A] hover:bg-[#E91E63] text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-2 transition-all group"
+                                >
+                                    Request Similar Project
+                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

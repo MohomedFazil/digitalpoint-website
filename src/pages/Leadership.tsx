@@ -12,17 +12,13 @@ const mainLeader = {
 };
 
 const directors = [
-    { name: "Sarah Chen", role: "Director of Operations", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" },
-    { name: "Michael Ross", role: "Creative Director", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop" },
-    { name: "Emily Watson", role: "Director of Marketing", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop" },
-    { name: "David Kim", role: "Technical Director", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop" },
-    { name: "Jessica Alverez", role: "Director of Sales", image: "https://images.unsplash.com/photo-1598550874175-4d7112ee7f8e?q=80&w=800&auto=format&fit=crop" },
-    { name: "Robert Taylor", role: "Finance Director", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" },
+    { name: "Mr.Lahiru Perera", role: "Director", image: "/leadership/director03.jpeg" },
+    { name: "Mr.Manjula D. Perera", role: "Director", image: "/leadership/director01.jpeg" },
+    { name: "Mr.Dilshan Perera", role: "Director", image: "/leadership/director02.jpeg" },
 ];
 
 const managers = [
-    { name: "Amanda Lo", role: "Production Manager", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop" },
-    { name: "James Wilson", role: "Client Relations Manager", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop" },
+    { name: "Chandrani Kankanamge", role: "Secretary", image: "/leadership/secretary.jpeg" },
 ];
 
 export function Leadership() {
@@ -118,20 +114,24 @@ export function Leadership() {
                             <span className="text-[#1b63bb] font-bold uppercase tracking-wider text-sm mb-2 block">Operational Excellence</span>
                             <h2 className="text-4xl font-bold text-gray-900">Management Team</h2>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                            {managers.map((manager, index) => (
-                                <div key={index} className="flex items-center space-x-6 bg-gray-50 p-6 rounded-2xl hover:bg-white hover:shadow-lg transition-all border border-gray-100 group">
-                                    <img
-                                        src={manager.image}
-                                        alt={manager.name}
-                                        className="w-24 h-24 rounded-full object-cover border-4 border-white shadow-md"
-                                    />
-                                    <div>
-                                        <h3 className="text-xl font-bold text-gray-900 mb-1">{manager.name}</h3>
-                                        <p className="text-gray-500">{manager.role}</p>
+                        <div className="flex justify-center">
+                            <div className="max-w-md w-full">
+                                {managers.map((manager, index) => (
+                                    <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
+                                        <div className="aspect-[4/3] overflow-hidden">
+                                            <img
+                                                src={manager.image}
+                                                alt={manager.name}
+                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                            />
+                                        </div>
+                                        <div className="p-6">
+                                            <h3 className="text-xl font-bold text-gray-900 mb-1">{manager.name}</h3>
+                                            <p className="text-[#E91E63] font-medium text-sm">{manager.role}</p>
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </section>
