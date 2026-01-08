@@ -4,15 +4,15 @@ import { Button } from './ui/Button';
 
 export function Hero() {
   return (
-    <section className="relative bg-white overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="relative pt-12 pb-20 overflow-hidden bg-white lg:pt-20 lg:pb-28">
+      <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
           {/* Left Content */}
           <div className="z-10">
             <p className="text-[#0640a3] font-medium mb-4 tracking-wide text-sm">
               What you want us to be!
             </p>
-            <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6">
+            <h1 className="mb-6 text-5xl font-bold leading-tight text-gray-900 lg:text-6xl">
               We are Your Ideal <br />
               <span className="text-[#E91E63] relative inline-block">
                 Printing
@@ -22,7 +22,7 @@ export function Hero() {
               </span>{' '}
               Partner
             </h1>
-            <p className="text-gray-600 text-lg mb-8 max-w-lg leading-relaxed">
+            <p className="max-w-lg mb-8 text-lg leading-relaxed text-gray-600">
               Digital Point delivers premium printing solutions for every need, from small batches to large scale orders. With a focus on quality, precision, and affordability, we bring your ideas to life beautifully and efficiently.
             </p>
             <Button
@@ -31,14 +31,14 @@ export function Hero() {
               onClick={() => window.location.href = '/about-us'}
             >
               Learn More
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
 
           {/* Right Content - Image Composition */}
           <div className="relative mt-10 lg:mt-0">
             {/* Main Image */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl transform lg:translate-x-8">
+            <div className="relative overflow-hidden transform shadow-2xl rounded-2xl lg:translate-x-8">
               <img
                 src="/hero.png"
                 alt="Industrial Printing Press"
@@ -50,16 +50,16 @@ export function Hero() {
             </div>
 
             {/* Floating Stats Card */}
-            <div className="absolute -top-10 -right-4 lg:-right-16 bg-white px-6 py-10 rounded-xl shadow-xl border border-gray-100 w-80 z-20">
+            <div className="absolute z-20 px-6 py-10 bg-white border border-gray-100 shadow-xl -top-10 -right-4 lg:-right-16 rounded-xl w-80">
               <div className="flex items-start justify-between mb-2">
                 <div>
                   <h3 className="text-3xl font-bold text-gray-900">10,000+</h3>
-                  <p className="text-xs text-gray-500 uppercase tracking-wider">
+                  <p className="text-xs tracking-wider text-gray-500 uppercase">
                     Units of Prints Produced in 2025
                   </p>
                 </div>
               </div>
-              <div className="mt-4 pt-4 border-t border-gray-100">
+              <div className="pt-4 mt-4 border-t border-gray-100">
                 <p className="text-sm text-gray-600">
                   <span className="text-[#E91E63] font-semibold">
                     Enough to wallpaper the Great Wall...
