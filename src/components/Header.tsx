@@ -52,7 +52,7 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0 space-x-3 hover:opacity-80 transition-opacity">
-            <img src='logo.png' alt='Digital Point' className='w-12 md:w-14' />
+            <img src='logo.png' alt='Digital Point' className='w-16 md:w-20 drop-shadow-[0_4px_14px_rgba(255,255,255,0.8)]' />
             <span className="text-sm md:text-base font-bold tracking-tight uppercase font-['Outfit'] leading-none">
               <span className="text-[#ff8a00]">Digital</span>
               <span className={`ml-1 ${scrolled || isOpen ? 'text-gray-900' : 'text-white'}`}>Point</span>
