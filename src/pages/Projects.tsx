@@ -85,6 +85,16 @@ const projects = [
         duration: "2 Working Days",
         material: "Premium Glossy Paper",
         sample: "Physical Sample"
+    },
+    {
+        id: 9,
+        title: "Commercial Vehicle Branding Project",
+        category: "Branding",
+        image: "/projects/project25.jpeg",
+        description: "Transform your vehicle into a mobile billboard with our premium full-wrap branding. High-resolution graphics and expert application ensure a seamless, professional finish that drives brand awareness on every road.",
+        duration: "5 Working Days",
+        material: "3M Premium Cast Vinyl",
+        sample: "Digital Mockup"
     }
 ];
 
