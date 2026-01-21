@@ -38,12 +38,12 @@ export function Footer() {
                 </p>
               </div>
 
-              <div className="flex items-center space-x-4 group cursor-default">
+              <a href='tel:+94740655900' className="flex items-center space-x-4 group cursor-pointer">
                 <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-[#1b63bb] group-hover:bg-[#1b63bb] group-hover:text-white transition-all duration-300">
                   <Phone className="h-5 w-5" />
                 </div>
                 <p className="text-gray-400 text-sm font-medium">+94 74 065 5900</p>
-              </div>
+              </a>
             </div>
           </div>
 
