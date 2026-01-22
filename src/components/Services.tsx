@@ -4,31 +4,31 @@ import { Link } from 'react-router-dom';
 const services = [{
   icon: Flag,
   label: 'Flag Printing',
-  image: '/services/flag.png'
+  image: '/assets/services-img/flag.png'
 }, {
   icon: ScrollText,
   label: 'X-Banners Printing',
-  image: '/services/x_banner.png'
+  image: '/assets/services-img/x_banner.png'
 }, {
   icon: GalleryVertical,
   label: 'Flex Banner Printing',
-  image: '/services/flex.png'
+  image: '/assets/services-img/flex.png'
 }, {
   icon: Frame,
   label: 'Light and Name Boards Printing',
-  image: '/services/light_Name.png'
+  image: '/assets/services-img/light_Name.png'
 }, {
   icon: Monitor,
   label: 'Funeral Banners Printing',
-  image: '/services/funeral.png'
+  image: '/assets/services-img/funeral.png'
 }, {
   icon: Printer,
   label: 'Sticker Printing',
-  image: '/services/sticker.png'
+  image: '/assets/services-img/sticker.png'
 }, {
   icon: Printer,
   label: 'Transparent Sticker Printing',
-  image: '/services/transparent.png'
+  image: '/assets/services-img/transparent.png'
 }];
 
 export function Services() {

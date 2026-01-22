@@ -114,7 +114,7 @@ export function ContactUs() {
             {/* Section Header */}
             <div className="text-center mb-24 animate-fade-in-up">
               <span className="text-[#1b63bb] font-black uppercase tracking-[0.4em] text-xs mb-4 block">Reach Out</span>
-              <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tighter uppercase mb-6 leading-tight overflow-visible">Connect <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1b63bb] to-[#E91E63] italic pr-4">With Us</span></h2>
+              <h2 className="text-3xl sm:text-5xl md:text-7xl font-black text-gray-900 tracking-tighter uppercase mb-6 leading-tight overflow-visible">Connect <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1b63bb] to-[#E91E63] italic pr-4">With Us</span></h2>
               <div className="w-24 h-2 bg-gradient-to-r from-[#1b63bb] to-[#E91E63] rounded-full mx-auto"></div>
             </div>
 

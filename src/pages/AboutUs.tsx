@@ -59,7 +59,7 @@ export function AboutUs() {
               <div className="relative">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="space-y-6">
-                    <img src="/projects/project10.jpeg" className="rounded-3xl shadow-2xl w-full h-80 object-cover transform hover:scale-105 transition-transform duration-500" alt="Printing" />
+                    <img src="/assets/projects-img/project10.jpeg" className="rounded-3xl shadow-2xl w-full h-80 object-cover transform hover:scale-105 transition-transform duration-500" alt="Printing" />
                     <div className="bg-gradient-to-br from-[#1b63bb] to-[#E91E63] p-1 rounded-3xl shadow-xl overflow-hidden">
                       <div className="bg-white p-8 rounded-[1.4rem] h-full flex flex-col justify-center">
                         <div className="text-5xl font-black text-[#E91E63] mb-2">3+</div>
@@ -68,7 +68,7 @@ export function AboutUs() {
                     </div>
                   </div>
                   <div className="pt-12">
-                    <img src="/projects/project01.jpeg" className="rounded-3xl shadow-2xl w-full h-[32rem] object-cover transform hover:scale-105 transition-transform duration-500" alt="Team meeting" />
+                    <img src="/assets/projects-img/project01.jpeg" className="rounded-3xl shadow-2xl w-full h-[32rem] object-cover transform hover:scale-105 transition-transform duration-500" alt="Team meeting" />
                   </div>
                 </div>
               </div>

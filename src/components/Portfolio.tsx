@@ -3,31 +3,31 @@ import { Link } from 'react-router-dom';
 
 const portfolioItems = [{
   id: 1,
-  image: '/projects/project01.jpeg',
+  image: '/assets/projects-img/project01.jpeg',
   size: 'small',
 }, {
   id: 2,
-  image: '/projects/project02.jpeg',
+  image: '/assets/projects-img/project02.jpeg',
   size: 'small',
 }, {
   id: 3,
-  image: '/projects/project03.jpeg',
+  image: '/assets/projects-img/project03.jpeg',
   size: 'tall',
 }, {
   id: 4,
-  image: '/projects/project10.jpeg',
+  image: '/assets/projects-img/project10.jpeg',
   size: 'small',
 }, {
   id: 5,
-  image: '/projects/project05.jpeg',
+  image: '/assets/projects-img/project05.jpeg',
   size: 'wide',
 }, {
   id: 6,
-  image: '/projects/project06.jpeg',
+  image: '/assets/projects-img/project06.jpeg',
   size: 'small',
 }, {
   id: 7,
-  image: '/projects/project07.jpeg',
+  image: '/assets/projects-img/project07.jpeg',
   size: 'small',
 }];
 

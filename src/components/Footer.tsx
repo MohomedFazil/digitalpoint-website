@@ -127,9 +127,8 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/5 pt-8 flex flex-col items-center justify-center gap-6">
-          <div className="flex items-center space-x-2 text-xs text-gray-500 font-bold uppercase tracking-[0.2em]">
-            <Copyright className="h-3 w-3" />
-            <span>{new Date().getFullYear()} Digital Point. Crafted with Excellence.</span>
+          <div className="flex items-center text-center space-x-2 text-xs text-gray-500 font-bold uppercase tracking-[0.2em]">
+            <span>&copy; {new Date().getFullYear()} Digital Point. Crafted with Excellence.</span>
           </div>
         </div>
       </div>

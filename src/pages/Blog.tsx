@@ -31,7 +31,7 @@ export const BLOG_DATA: BlogPost[] = [
         title: 'Creating Impactful Posters: How Prints Help Your Brand Stand Out',
         category: 'Printing',
         date: '5 Jan 2026',
-        image: "/projects/project01.jpeg",
+        image: "/assets/projects-img/project01.jpeg",
         author: 'Digital Point',
         excerpt: 'Discover how high-quality posters can elevate your brand visibility and make your campaigns memorable.',
         content: (
@@ -50,7 +50,7 @@ export const BLOG_DATA: BlogPost[] = [
         title: 'Banner Printing Tips: Make Your Event Unforgettable',
         category: 'Printing',
         date: '15 Jan 2026',
-        image: "/projects/project09.jpeg",
+        image: "/assets/projects-img/project09.jpeg",
         author: 'Digital Point',
         excerpt: 'Learn how to design banners that draw attention and create a memorable impression for any event.',
         content: (
@@ -69,7 +69,7 @@ export const BLOG_DATA: BlogPost[] = [
         title: 'Sticker and Label Design: Boost Your Product’s Appeal',
         category: 'Printing',
         date: '22 Jan 2026',
-        image: "/projects/project18.jpeg",
+        image: "/assets/projects-img/project18.jpeg",
         author: 'Digital Point',
         excerpt: 'Discover how well-designed stickers and labels can enhance product recognition and sales.',
         content: (
@@ -88,7 +88,7 @@ export const BLOG_DATA: BlogPost[] = [
         title: 'Flex Banner Printing: Durable and Eye-Catching',
         category: 'Printing',
         date: '30 Jan 2026',
-        image: "/projects/project13.jpeg",
+        image: "/assets/projects-img/project13.jpeg",
         author: 'Digital Point',
         excerpt: 'Flex banners are perfect for outdoor promotions. Learn how to make yours more effective.',
         content: (
@@ -107,7 +107,7 @@ export const BLOG_DATA: BlogPost[] = [
         title: 'Light and Name Boards Printing: Make Your Business Shine',
         category: 'Printing',
         date: '5 Feb 2026',
-        image: "/projects/project05.jpeg",
+        image: "/assets/projects-img/project05.jpeg",
         author: 'Digital Point',
         excerpt: 'Custom light boards and name signs help your business stand out in a crowded marketplace.',
         content: (
@@ -126,7 +126,7 @@ export const BLOG_DATA: BlogPost[] = [
         title: 'Event Orientation Kits: Impress Your Audience',
         category: 'Printing',
         date: '12 Feb 2026',
-        image: "/projects/project11.jpeg",
+        image: "/assets/projects-img/project11.jpeg",
         author: 'Digital Point',
         excerpt: 'Customized orientation kits help your events look professional and leave a lasting impression.',
         content: (
@@ -145,7 +145,7 @@ export const BLOG_DATA: BlogPost[] = [
         title: 'Creative Flyer Design: Attract Your Customers',
         category: 'Printing',
         date: '20 Feb 2026',
-        image: "/projects/project07.jpeg",
+        image: "/assets/projects-img/project07.jpeg",
         author: 'Digital Point',
         excerpt: 'Well-designed flyers can dramatically improve your outreach and engagement.',
         content: (
@@ -164,7 +164,7 @@ export const BLOG_DATA: BlogPost[] = [
         title: 'Custom Flag Printing: Showcase Your Brand Everywhere',
         category: 'Printing',
         date: '28 Feb 2026',
-        image: "/projects/project19.jpeg",
+        image: "/assets/projects-img/project19.jpeg",
         author: 'Digital Point',
         excerpt: 'Flags are a great way to represent your brand at events and outdoor spaces.',
         content: (
@@ -183,7 +183,7 @@ export const BLOG_DATA: BlogPost[] = [
         title: 'Transparent Sticker Printing: Creative and Versatile',
         category: 'Printing',
         date: '8 Mar 2026',
-        image: "/projects/project20.jpeg",
+        image: "/assets/projects-img/project20.jpeg",
         author: 'Digital Point',
         excerpt: 'Transparent stickers are perfect for product packaging and promotional items.',
         content: (
@@ -202,7 +202,7 @@ export const BLOG_DATA: BlogPost[] = [
         title: 'Marketing Collateral: Elevate Your Brand Identity',
         category: 'Printing',
         date: '15 Mar 2026',
-        image: "/projects/project10.jpeg",
+        image: "/assets/projects-img/project10.jpeg",
         author: 'Digital Point',
         excerpt: 'From brochures to business cards, cohesive marketing materials strengthen your brand presence.',
         content: (
